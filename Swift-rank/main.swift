@@ -8,5 +8,20 @@
 
 import Foundation
 
-print("Hello, World!")
-
+var nub:[Int]=[10,9,8,7,6,5,4,3,2,1]
+for i in 0..<nub.count
+{
+    for j in 1..<nub.count-i
+    {
+        if(nub[j]>nub[j-1])
+        {
+            let temp = nub[j]
+            nub[j]=nub[j-1]
+            nub[j-1]=temp
+        }
+    }
+}
+for i in 0..<nub.count
+{
+    print(nub[i])
+}
